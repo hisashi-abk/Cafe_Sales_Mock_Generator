@@ -1,0 +1,186 @@
+# 生成するデータの期間設定
+generate_period:
+  year: 2024
+  month: 4
+
+# 営業時間の設定
+business_hours:
+  start:
+    hour: 7
+    minute: 0
+  end:
+    hour: 17
+    minute: 0
+
+# 1日の来客数の上限設定
+max_daily_customers: 100
+
+# 天気の影響
+weather_factors:
+  sunny: 1.0
+  cloudy: 0.8
+  rainy: 0.6
+
+# 天気の設定
+weather:
+  sunny:
+    id: 1
+    name: "晴れ"
+    takeout_limit: 15
+  cloudy:
+    id: 2
+    name: "曇り"
+    takeout_limit: 10
+  rainy:
+    id: 3
+    name: "雨"
+    takeout_limit: 5
+
+# 時間帯の設定
+time_slots:
+  morning:
+    id: 1
+    name: "モーニング"
+    hours:
+      - [7, 0]
+      - [8, 59]
+    customer_range: [5, 20]
+  lunch:
+    id: 2
+    name: "ランチ"
+    hours:
+      - [11, 45]
+      - [13, 29]
+    customer_range: [10, 30]
+  teatime:
+    id: 3
+    name: "ティータイム"
+    hours:
+      - [14, 45]
+      - [16, 00]
+    customer_range: [3, 15]
+  regular:
+    id: 4
+    name: "レギュラー"
+    hours: []
+    customer_range: [3, 10]
+
+# メニューのカテゴリ
+categories:
+  - id: 1
+    name: "ドリンク"
+  - id: 2
+    name: "サンドイッチ"
+  - id: 3
+    name: "ケーキ"
+
+# メニュー
+menu_items:
+  drinks:
+    category_id: 1
+    items:
+      - id: 1
+        name: "アメリカン"
+        price: 380
+      - id: 2
+        name: "カフェラテ"
+        price: 420
+      - id: 3
+        name: "カプチーノ"
+        price: 420
+      - id: 4
+        name: "抹茶ラテ"
+        price: 450
+      - id: 5
+        name: "エスプレッソ"
+        price: 300
+      - id: 6
+        name: "アイスコーヒー"
+        price: 350
+      - id: 7
+        name: "カフェモカ"
+        price: 450
+      - id: 8
+        name: "ほうじ茶ラテ"
+        price: 430
+      - id: 9
+        name: "ロイヤルミルクティー"
+        price: 400
+      - id: 10
+        name: "オレンジジュース"
+        price: 380
+  sandwiches:
+    category_id: 2
+    items:
+      - id: 11
+        name: "ハムチーズ"
+        price: 580
+      - id: 12
+        name: "ツナサラダ"
+        price: 520
+      - id: 13
+        name: "エッグサラダ"
+        price: 500
+      - id: 14
+        name: "BLT"
+        price: 600
+      - id: 15
+        name: "アボカドチキン"
+        price: 650
+      - id: 16
+        name: "ベジタリアン"
+        price: 550
+  cakes:
+    category_id: 3
+    items:
+      - id: 17
+        name: "ショートケーキ"
+        price: 480
+      - id: 18
+        name: "チョコレートケーキ"
+        price: 480
+      - id: 19
+        name: "チーズケーキ"
+        price: 420
+      - id: 20
+        name: "モンブラン"
+        price: 500
+      - id: 21
+        name: "ティラミス"
+        price: 450
+      - id: 22
+        name: "フルーツタルト"
+        price: 480
+      - id: 23
+        name: "ガトーショコラ"
+        price: 460
+      - id: 24
+        name: "レモンケーキ"
+        price: 420
+
+# 性別の設定
+genders:
+  male:
+    id: 1
+    name: "男性"
+  female:
+    id: 2
+    name: "女性"
+
+# 注文タイプ
+order_types:
+  for_here:
+    id: 1
+    name: "店内"
+  takeout:
+    id: 2
+    name: "テイクアウト"
+
+# セットメニュー価格
+set_menu_pricing:
+  morning:
+    max_price: 900
+  lunch:
+    max_price: 1200
+  teatime:
+    max_price: 800
